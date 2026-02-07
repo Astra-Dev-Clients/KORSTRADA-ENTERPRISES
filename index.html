@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korstrada Enterprises Limited | Proprietary Trading</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --kor-dark-blue: #0C3658;
+            --kor-teal: #26697D;
+            --kor-lime: #D9E990;
+            --kor-light-grey: #f4f7f6;
+            --dark-text: #333333;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark-text);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px) !important;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+        }
+
+        .btn-primary-kor {
+            background-color: var(--kor-dark-blue);
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary-kor:hover {
+            background-color: var(--kor-teal);
+            color: white;
+        }
+
+        .btn-outline-kor {
+            color: var(--kor-dark-blue);
+            border: 2px solid var(--kor-dark-blue);
+            padding: 10px 30px;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-kor:hover {
+            background-color: var(--kor-dark-blue);
+            color: white;
+        }
+
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 1rem 0;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--kor-dark-blue) !important;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        .navbar img {
+            max-width: 50px;
+            height: auto;
+            margin-right: 15px;
+        }
+
+        .hero-section {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: var(--kor-dark-blue);
+        }
+
+        .hero-text .highlight {
+            color: var(--kor-teal);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-text .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            height: 15px;
+            background-color: var(--kor-lime);
+            z-index: -1;
+            opacity: 0.6;
+        }
+
+        .feature-card {
+            border: none;
+            border-radius: 8px;
+            padding: 40px 30px;
+            background: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            height: 100%;
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--kor-teal);
+            margin-bottom: 25px;
+        }
+
+        #heroImage {
+            clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));
+            transition: all 0.5s ease;
+        }
+
+        #heroImage:hover {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 0);
+        }
+
+        footer {
+            background-color: var(--kor-dark-blue);
+            color: white;
+            padding: 60px 0 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <img src="./image.png" alt="">
+            <a class="navbar-brand" href="#">KORSTRADA ENTERPRISES</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#services" id="servicesDropdown" role="button" data-bs-toggle="dropdown">Services</a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="#services">Capital Provision</a></li>
+                            <li><a class="dropdown-item" href="#services">Trading Technology</a></li>
+                            <li><a class="dropdown-item" href="#services">Mentorship Program</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#about" id="aboutDropdown" role="button" data-bs-toggle="dropdown">About</a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="#about">Our Team</a></li>
+                            <li><a class="dropdown-item" href="#about">Company History</a></li>
+                            <li><a class="dropdown-item" href="#about">Partnerships</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="#contact" class="btn btn-primary-kor">Start Trading</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-text">
+                    <span class="fw-bold mb-2 d-block" style="color: var(--kor-teal);">ESTABLISHED 2025</span>
+                    <h1>Empowering African Traders with <span class="highlight">Expertise</span></h1>
+                    <p class="lead mb-4">We provide traders with the capital, resources, and mentorship to succeed in global financial markets. Unlock your full potential with Korstrada.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#services" class="btn btn-primary-kor">Explore Services</a>
+                        <a href="#about" class="btn btn-outline-kor">Our Team</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center mt-5 mt-lg-0">
+                    <img src="https://i.pinimg.com/736x/06/13/b8/0613b8845e6788c72f515fc593eb19cc.jpg" 
+                         alt="Professional Office" id="heroImage">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-5" style="background-color: var(--kor-light-grey);">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="fw-bold" style="color: var(--kor-dark-blue);">Our Proprietary Edge</h2>
+                    <p class="text-muted">High-performance tools for ambitious traders.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card project-card">
+                        <div class="feature-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                        <h5>Capital Provision</h5>
+                        <p class="text-muted small">Access deep liquidity and firm capital to trade Forex, Stocks, and Futures without risking your own savings.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card project-card">
+                        <div class="feature-icon"><i class="bi bi-cpu"></i></div>
+                        <h5>State-of-the-art Tech</h5>
+                        <p class="text-muted small">Our platform offers low-latency execution and advanced analytics for professional-level decision making.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card project-card">
+                        <div class="feature-icon"><i class="bi bi-person-workspace"></i></div>
+                        <h5>Direct Mentorship</h5>
+                        <p class="text-muted small">Gain insights from seasoned market veterans who provide the guidance needed to navigate global volatility.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded shadow" alt="Team Work">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold" style="color: var(--kor-dark-blue);">Serving the Continent</h2>
+                    <p>Korstrada Enterprises Limited is an African company that serves the interest of the citizens of the continent by creating opportunity and employment.</p>
+                    <p>We are a leading proprietary trading firm designed to empower traders of all levels. We offer competitive profit-sharing models and a supportive community to help you achieve your trading ambitions.</p>
+                    <a href="#" class="btn btn-outline-kor mt-3">Learn More About Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-5" style="background-color: var(--kor-light-grey); border-top: 1px solid #e0e0e0;">
+        <div class="container">
+            <div class="row text-center mb-4">
+                <div class="col-12">
+                    <h6 class="fw-bold text-uppercase shadow-sm d-inline-block px-3 py-1 rounded bg-white" style="color: var(--kor-teal); font-size: 0.75rem; letter-spacing: 2px;">Institutional Partners & Platforms</h6>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-center g-5">
+                <div class="col-6 col-md-3 col-lg-2 text-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Binance_Logo.svg" alt="Binance" class="img-fluid partner-logo" style="max-height: 35px;">
+                </div>
+                <div class="col-6 col-md-3 col-lg-2 text-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/MetaTrader_5.png" alt="MetaTrader 5" class="img-fluid partner-logo" style="max-height: 45px;">
+                </div>
+                <div class="col-6 col-md-3 col-lg-2 text-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Bloomberg_logo.svg" alt="Bloomberg" class="img-fluid partner-logo" style="max-height: 30px;">
+                </div>
+                <div class="col-6 col-md-3 col-lg-2 text-center">
+                    <img src="https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/logos/tradingview-ax7sxe5lm8knfaxwcaldi.png/tradingview-nct7p51k07roxa6picopf.png?_a=DATAiZAAZAA0" alt="TradingView" class="img-fluid partner-logo" style="max-height: 35px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .partner-logo {
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+        .partner-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.05);
+        }
+    </style>
+
+    <footer>
+        <div class="container">
+            <div class="text-center">
+                <small style="color: #b0c4de;">All rights reserved &copy; 2025 Korstrada Enterprises Limited.</small>
+            </div>
+        </div>
+    </footer>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-3">Korstrada Enterprises</h5>
+                    <p class="small" style="color: #b0c4de;">
+                        Providing the tools and expertise to help you unlock your full potential in the global financial markets.
+                    </p>
+                </div>
+                <div class="col-lg-4 mb-4 text-lg-center">
+                    <h6 class="fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Terms of Service</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h6 class="fw-bold mb-3">Newsletter</h6>
+                    <div class="input-group">
+                        <input type="text" class="form-control form-control-sm" placeholder="Email Address">
+                        <button class="btn btn-primary-kor btn-sm">Join</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary opacity-25">
+            <div class="text-center">
+                <small style="color: #b0c4de;">All rights reserved &copy; 2025 Korstrada Enterprises Limited.</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
